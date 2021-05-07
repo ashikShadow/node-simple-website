@@ -20,4 +20,5 @@ You can [access the tutorial here](https://freshman.tech/learn-node).
 
 Need some help? Leave a comment on the tutorial — this repo is meant as a place to grab the finished code and isn't a support channel.
 
-
+# Checking Jenkin Job
+Trigger Jenkins and see result
