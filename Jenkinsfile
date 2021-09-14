@@ -8,6 +8,7 @@ pipeline {
         script {
           sh "pwd"
           sh "ls"
+          sh "sudo docker --version"
         }
       }
     }
