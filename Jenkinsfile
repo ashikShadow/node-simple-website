@@ -5,7 +5,9 @@ pipeline {
     stage('greet') {
       steps {
         echo "Hello World"
-        pwd
+        scripts {
+          sh "pwd"
+        }
       }
     }
   }
