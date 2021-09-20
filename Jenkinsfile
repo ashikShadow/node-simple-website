@@ -14,4 +14,5 @@ pipeline {
         sh 'docker run -d -p 7000:7000 myapp:latest'
       }
     }
+  }
 }
