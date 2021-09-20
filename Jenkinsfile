@@ -2,14 +2,10 @@ pipeline {
   agent any 
   
   stages {
-    stage('greet') {
+    stage('build') {
       steps {
         echo "Hello World"
-        script {
-          sh "pwd"
-          sh "ls"
-          sh "docker --version"
-        }
+        sh 'sudo docker build -t myapp .'
       }
     }
   }
