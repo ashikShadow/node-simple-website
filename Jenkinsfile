@@ -5,7 +5,7 @@ pipeline {
     stage('build') {
       steps {
         echo "Hello World"
-        sh 'sudo docker build -t myapp .'
+        sh 'docker build -t myapp .'
       }
     }
   }
