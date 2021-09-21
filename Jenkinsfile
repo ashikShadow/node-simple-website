@@ -5,13 +5,15 @@ pipeline {
 
     stage('Declaring Variables') {
       steps {
-        //env.ECRREPOURI = "096176992732.dkr.ecr.ap-south-1.amazonaws.com/fego-transaction"
-        //env.DOCKERPUSHURL = "https://096176992732.dkr.ecr.ap-south-1.amazonaws.com/fego-transaction"
-        // echo "branch name : demo"
-        // env.TAG = "${env.BRANCH_NAME}" + "-" + "${BUILD_NUMBER}"
-        env.first_name = "Mohamed"
-        env.last_name = "Ashik"
-        echo "My name is ${env.first_name} ${env.last_name}"
+        script {
+          //env.ECRREPOURI = "096176992732.dkr.ecr.ap-south-1.amazonaws.com/fego-transaction"
+          //env.DOCKERPUSHURL = "https://096176992732.dkr.ecr.ap-south-1.amazonaws.com/fego-transaction"
+          // echo "branch name : demo"
+          // env.TAG = "${env.BRANCH_NAME}" + "-" + "${BUILD_NUMBER}"
+          env.first_name = "Mohamed"
+          env.last_name = "Ashik"
+          echo "My name is ${env.first_name} ${env.last_name}"
+        }
       }
     }
       
