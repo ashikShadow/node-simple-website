@@ -24,7 +24,7 @@ pipeline {
     stage('build') {
       steps {
         echo "Hello World"
-        sh 'docker build -t myapp .'
+        sh 'docker build -t node-website .'
       }
   }
     // stage('deploy') {
@@ -37,8 +37,8 @@ pipeline {
         script {
           echo "Pushing build to ECR repository"
           sh "aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin 367359144602.dkr.ecr.us-east-1.amazonaws.com"
-          sh "docker tag node-website:latest ${REPOSITORY_URI}:latest"
-          sh "docker push ${REPOSITORY_URI}:latest"
+          sh "docker tag node-website:latest ${REPOSITORY_URI}"
+          sh "docker push ${REPOSITORY_URI}"
         }
       }
     }
