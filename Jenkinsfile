@@ -11,6 +11,7 @@ pipeline {
         // env.TAG = "${env.BRANCH_NAME}" + "-" + "${BUILD_NUMBER}"
         env.first_name = "Mohamed"
         env.last_name = "Ashik"
+        echo "My name is ${env.first_name} ${env.last_name}"
       }
     }
       
@@ -18,7 +19,6 @@ pipeline {
       steps {
         echo "Hello World"
         sh 'docker build -t myapp .'
-        echo "My name is ${env.first_name} ${env.last_name}"
       }
   }
     stage('deploy') {
